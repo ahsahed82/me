@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods | Akther Hussain Sahed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.4rem;
+        }
+        .payment-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        .payment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #0891b2, #06b6d4);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        .payment-card:hover {
+            border-color: rgba(8, 145, 178, 0.45);
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(8, 145, 178, 0.12);
+        }
+        .payment-card:hover::before {
+            transform: scaleX(1);
+        }
+        .payment-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(8, 145, 178, 0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1.1rem;
+            transition: all 0.35s ease;
+        }
+        .payment-card:hover .payment-icon {
+            background: linear-gradient(135deg, #0891b2, #06b6d4);
+            transform: scale(1.1);
+        }
+        .payment-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+        .payment-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+        .payment-number {
+            background: rgba(8, 145, 178, 0.1);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            display: inline-block;
+            user-select: all;
+        }
+        .note-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            margin-top: 3rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .note-box h3 {
+            margin-bottom: 0.8rem;
+            color: var(--text);
+        }
+        .note-box p {
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 0.8rem;
+            line-height: 1.7;
+        }
+        .steps {
+            text-align: left;
+            max-width: 500px;
+            margin: 1.5rem auto 0;
+            color: var(--text-muted);
+        }
+        .steps li {
+            margin-bottom: 0.6rem;
+            padding-left: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Akther<span>.</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="payment.html" class="active">Payment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="tel:+8801789630040" class="btn btn-call">📞 Call</a>
+                <a href="mailto:a.h.sahed82@gmail.com" class="btn btn-email">✉️ Email</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="experience.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="payment.html" class="active">Payment</a>
+        <a href="contact.html">Contact</a>
+        <div class="mobile-buttons">
+            <a href="tel:+8801789630040" class="btn btn-call">📞 Call Now</a>
+            <a href="mailto:a.h.sahed82@gmail.com" class="btn btn-email">✉️ Email</a>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1 class="animate">Payment Methods</h1>
+        <p class="animate delay-1">Easy Payment Options (Bangladesh)</p>
+    </div>
+
+    <section class="section" style="padding-top: 1rem;">
+        <div class="payment-grid">
+            <div class="payment-card animate">
+                <div class="payment-icon">📱</div>
+                <h3>bKash</h3>
+                <p>Send Money</p>
+                <div class="payment-number">01789-630040</div>
+            </div>
+            <div class="payment-card animate delay-1">
+                <div class="payment-icon">📲</div>
+                <h3>Nagad</h3>
+                <p>Send Money</p>
+                <div class="payment-number">01789-630040</div>
+            </div>
+            <div class="payment-card animate delay-2">
+                <div class="payment-icon">🚀</div>
+                <h3>Rocket</h3>
+                <p>Send Money</p>
+                <div class="payment-number">01789-630040</div>
+            </div>
+            <div class="payment-card animate">
+                <div class="payment-icon">💳</div>
+                <h3>Upay</h3>
+                <p>Send Money</p>
+                <div class="payment-number">01789-630040</div>
+            </div>
+            <div class="payment-card animate delay-1">
+                <div class="payment-icon">🏦</div>
+                <h3>Bank Transfer</h3>
+                <p>Any Bank</p>
+                <div class="payment-number">Contact for details</div>
+            </div>
+            <div class="payment-card animate delay-2">
+                <div class="payment-icon">💵</div>
+                <h3>Cash</h3>
+                <p>In-person / Local</p>
+                <div class="payment-number">Available</div>
+            </div>
+        </div>
+
+        <div class="note-box animate">
+            <h3>📌 How to Pay (bKash / Nagad / Rocket / Upay)</h3>
+            <ol class="steps">
+                <li>App e giye <strong>Send Money</strong> select korun</li>
+                <li>Number din: <strong>01789-630040</strong></li>
+                <li>Amount likhun</li>
+                <li>Apnar PIN diye confirm korun</li>
+                <li>Transaction ID / Screenshot amar WhatsApp ba Email e pathan</li>
+            </ol>
+            <p style="margin-top: 1.5rem;">
+                Payment confirm howar pore kaj shuru kora hobe.  
+                Konot a problem hole direct call korun: <strong>01789-630040</strong>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Akther Hussain Sahed. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Akther Hussain Sahed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-section {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 2.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            color: var(--text);
+        }
+        .form-section > p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.3rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.15);
+            background: #fff;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group select {
+            cursor: pointer;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .form-section {
+                padding: 1.5rem;
+            }
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 0.95rem;
+            background: linear-gradient(135deg, #0891b2, #06b6d4);
+            color: white;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px var(--accent-glow);
+        }
+        .form-note {
+            margin-top: 1rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(5, 150, 105, 0.08);
+            border: 1px solid rgba(5, 150, 105, 0.3);
+            border-radius: 12px;
+            color: #047857;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Akther<span>.</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="tel:+8801789630040" class="btn btn-call">📞 Call</a>
+                <a href="mailto:a.h.sahed82@gmail.com" class="btn btn-email">✉️ Email</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="experience.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="payment.html">Payment</a>
+        <a href="contact.html" class="active">Contact</a>
+        <div class="mobile-buttons">
+            <a href="tel:+8801789630040" class="btn btn-call">📞 Call Now</a>
+            <a href="mailto:a.h.sahed82@gmail.com" class="btn btn-email">✉️ Email</a>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h1 class="animate">Contact Me</h1>
+        <p class="animate delay-1">Request a service or get in touch</p>
+    </div>
+
+    <section class="section" style="padding-top: 1rem;">
+        <div class="contact-wrapper">
+            <div class="contact-card animate">
+                <div class="contact-icon">📞</div>
+                <h3>Call Me</h3>
+                <p>+880 1789-630040</p>
+                <a href="tel:+8801789630040" class="btn btn-call">Call Now</a>
+            </div>
+            <div class="contact-card animate delay-1">
+                <div class="contact-icon">✉️</div>
+                <h3>Email Me</h3>
+                <p>a.h.sahed82@gmail.com</p>
+                <a href="mailto:a.h.sahed82@gmail.com" class="btn btn-email">Send Email</a>
+            </div>
+            <div class="contact-full animate delay-2">
+                <h3>Find Me Online</h3>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Connect with me on social media</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/ahsahed82" target="_blank" class="social-btn">📘 Facebook</a>
+                    <a href="#" class="social-btn" style="opacity: 0.6; cursor: default;">💼 LinkedIn (Coming Soon)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Request Form -->
+        <div class="form-section animate">
+            <h2>Service Request Form</h2>
+            <p>Form fill-up, Data Entry ba onno service lagle niche form fill kore pathan</p>
+            
+            <!-- 
+              DIRECT EMAIL SEND SETUP:
+              1. Go to https://formspree.io and create free account
+              2. Create a new form
+              3. Copy the form endpoint (looks like: https://formspree.io/f/xxxxxxxx)
+              4. Replace the action URL below with your endpoint
+            -->
+            <form action="https://formspree.io/f/xdeoqbgj" method="POST" id="requestForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" name="name" required placeholder="Apnar nam">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" required placeholder="01XXXXXXXXX">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email (Optional)</label>
+                    <input type="email" name="email" placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Service Type *</label>
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="Data Entry">Data Entry</option>
+                        <option value="Online Form Fill-up">Online Form Fill-up</option>
+                        <option value="NID / Birth Certificate">NID / Birth Certificate</option>
+                        <option value="Passport Application">Passport Application</option>
+                        <option value="Admission Form">Admission Form (School/College/University)</option>
+                        <option value="Photo Editing">Photo Editing</option>
+                        <option value="Email Management">Email Management</option>
+                        <option value="Printing">Printing</option>
+                        <option value="Excel / Stock Report">Excel / Stock Report</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Details / Message *</label>
+                    <textarea name="message" required placeholder="Ki kaj lagbe, details likhun..."></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Service Request from Portfolio">
+                <button type="submit" class="submit-btn">Send Request →</button>
+                <p class="form-note">
+                    Direct email send er jonno Formspree free account banate hobe (1 minute). 
+                    Setup instruction niche dewa ache.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Akther Hussain Sahed. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
